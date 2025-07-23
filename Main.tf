@@ -12,7 +12,7 @@ resource "random_string" "storage_account_name_unique" {
 }
 
 resource "azurerm_storage_account" "mystoragebox" {
-  count                    = 2
+  count                    = 3
   name                     = "mybox${random_string.storage_account_name_unique[count.index].result}"
   resource_group_name      = azurerm_resource_group.myRG.name
   location                 = azurerm_resource_group.myRG.location
