@@ -27,7 +27,6 @@ resource "azurerm_storage_account" "mystoragebox" {
 
 
 /*resource "azurerm_storage_account" "mystoragebox" {
->>>>>>> 9d0830f (Added files)
   count                    = 2
   name                     = "mybox${count.index + 1}"
   resource_group_name      = azurerm_resource_group.myRG.name
