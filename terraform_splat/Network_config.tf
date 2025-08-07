@@ -1,6 +1,6 @@
 resource "azurerm_public_ip" "PUBIP" {
   count               = 2
-  name                = "mypubip-${count.index}"
+  name                = "mypubip-${count.index + 1}"
   resource_group_name = azurerm_resource_group.RG10.name
   location            = azurerm_resource_group.RG10.location
   allocation_method   = "Static"

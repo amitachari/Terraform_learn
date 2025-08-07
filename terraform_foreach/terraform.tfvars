@@ -13,10 +13,15 @@ VMs = {
   },
   vm2 = {
     name        = "DBserver"
-    vm_size     = "Standard_B1s"
+    vm_size     = "Standard_B2s"
     user_name   = "vmadmin2"
     subnet_name = "subnet2"
 
   }
 
+}
+
+subnets = {
+subnet1 = "10.0.1.0/24"
+subnet2 = "10.0.2.0/24"
 }

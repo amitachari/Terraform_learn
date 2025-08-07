@@ -22,4 +22,7 @@ resource "azurerm_windows_virtual_machine" "demovm" {
     sku       = "2016-Datacenter"
     version   = "latest"
   }
+
+  #lifecycle changes
+  
 }
