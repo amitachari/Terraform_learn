@@ -1,6 +1,6 @@
 
 resource "azurerm_resource_group" "myRG" {
-  name     = "Terraform_RG"
+  name     = "Terraform_RG1"
   location = "East US"
 
 }
