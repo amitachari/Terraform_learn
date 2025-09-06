@@ -5,7 +5,7 @@ resource "azurerm_resource_group" "myRG" {
 
 }
 resource "random_string" "storage_account_name_unique" {
-  length  = 16
+  length  = 8
   special = false
   upper   = false
   count   = 2
