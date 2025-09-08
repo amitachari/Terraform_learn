@@ -1,5 +1,3 @@
-
-
 resource "azurerm_windows_virtual_machine" "VirtualMachine" {
   name                = "customdata_VM"
   resource_group_name = var.resource_group_name
@@ -22,5 +20,19 @@ resource "azurerm_windows_virtual_machine" "VirtualMachine" {
     sku       = "2016-Datacenter"
     version   = "latest"
   }
-  custom_data = filebase64("${path.module}/ADDSInstall.ps1")
+  
+}
+
+resource "azurerm_virtual_machine_extension" "adds_install" {
+  name = "ADDSInstall"
+  virtual_machine_id = azurerm_windows_virtual_machine.VirtualMachine.id
+  publisher = "Microsoft.Compute"
+  type = "CustomScriptExtension"
+  type_handler_version = "1.10"
+
+  settings = <<SETTINGS
+  {
+  "commandToExecute": "powershell -ExecutionPolicy Unrestricted -command \"$(Get-Content ${path.module}/ADDSInstall.ps1 | Out-String)\""
+  }
+ SETTINGS
 }
