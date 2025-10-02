@@ -4,7 +4,10 @@ resource "azurerm_resource_group" "myRG" {
   location = "East US"
 
 }
+
 resource "random_string" "storage_account_name_unique" {
+  {
+
   length  = 16
   special = false
   upper   = false
@@ -21,7 +24,6 @@ resource "azurerm_storage_account" "mystoragebox" {
 
 
 
-} 
 
 
 /*resource "azurerm_storage_account" "mystoragebox" {
@@ -32,4 +34,4 @@ resource "azurerm_storage_account" "mystoragebox" {
   account_tier             = "Standard"
   account_replication_type = "GRS"
 
-}*/
+
