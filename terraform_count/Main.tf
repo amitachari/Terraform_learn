@@ -23,7 +23,7 @@ resource "azurerm_storage_account" "mystoragebox" {
   account_replication_type = "GRS"
 
 
-}
+
 
 
 /*resource "azurerm_storage_account" "mystoragebox" {
@@ -34,4 +34,4 @@ resource "azurerm_storage_account" "mystoragebox" {
   account_tier             = "Standard"
   account_replication_type = "GRS"
 
-}*/
+
