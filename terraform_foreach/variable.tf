@@ -26,16 +26,20 @@ variable "resource_group_location" {
 
 
 
-variable "subnets" {
+/*variable "subnets" {
   description = "Map of subnet names to their address prefixes"
   type        = map(string)
   default = {
-    subnet1 = "10.0.1.0/24"
-    subnet2 = "10.0.2.0/24"
+    subnet1 = string
+    subnet2 = string
 
   }
-}
+}*/
 
+variable "subnets" {
+  type = map(string)
+ 
+}
 variable "prefixes" {
   type        = string
   description = "Prefix for naming all Azure resources"

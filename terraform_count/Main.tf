@@ -4,13 +4,14 @@ resource "azurerm_resource_group" "myRG" {
   location = "East US"
 
 }
-<<<<<<< HEAD
+
 resource "random_string" "storage_account_name_unique" {
   {
+
   length  = 16
   special = false
   upper   = false
-  count   = 2
+  count   = 1
 }
 
 resource "azurerm_storage_account" "mystoragebox" {
@@ -22,10 +23,11 @@ resource "azurerm_storage_account" "mystoragebox" {
   account_replication_type = "GRS"
 
 
+}
 
-} 
 
- /*resource "azurerm_storage_account" "mystoragebox" {
+/*resource "azurerm_storage_account" "mystoragebox" {
+>>>>>>> 9d0830f (Added files)
   count                    = 2
   name                     = "mybox${count.index + 1}"
   resource_group_name      = azurerm_resource_group.myRG.name
