@@ -1,3 +1,3 @@
 # Terraform_learn
 
-Welcome to devops
+Welcome to terraform
