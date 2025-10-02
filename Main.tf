@@ -1,6 +1,6 @@
 
 resource "azurerm_resource_group" "myRG" {
-  name     = "Terraform_RG1"
+  name     = "Terraform_RG"
   location = "East US"
 
 }
@@ -12,7 +12,7 @@ resource "random_string" "storage_account_name_unique" {
 }
 
 resource "azurerm_storage_account" "mystoragebox" {
-  count                    = 4
+  count                    = 2
   name                     = "mybox${random_string.storage_account_name_unique[count.index].result}"
   resource_group_name      = azurerm_resource_group.myRG.name
   location                 = azurerm_resource_group.myRG.location
