@@ -13,3 +13,4 @@ terraform main commands : init, plan, apply
 
 terraform is Hashicopr configuration language.
 
+Terraform is used for infrastructure as code (IaC), allowing developers to define, provision, and manage cloud and on-premises infrastructure, such as virtual machines, databases, and networks, by writing configuration files in a human-readable language like HCL
