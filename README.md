@@ -8,4 +8,8 @@ Terraform is trending IAC tool for infrastructure build
 #local changes
 Terraform can be integrated with Azure devops for CI/CD
 
+
 terraform main commands : init, plan, apply
+
+terraform is Hashicopr configuration language.
+
