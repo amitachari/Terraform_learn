@@ -15,3 +15,22 @@
 terraform.tfstate
 
 terraform.tfstate.backup
+
+*.tfstate
+*.tfstate.*
+
+crash.log
+crash.*.log
+
+# Exclude all providers / plugins downloaded locally
+.terraform/
+
+# Lock file (optional): ignore if you don't want it committed
+.terraform.lock.hcl
+
+# Backup files
+*.backup
+*.bak
+
+# Exec and binaries
+*.exe
