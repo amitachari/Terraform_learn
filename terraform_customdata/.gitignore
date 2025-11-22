@@ -1,4 +1,5 @@
 # Local terraform directories
+
 **/.terraform/*
 
 
@@ -34,3 +35,6 @@ crash.*.log
 
 # Exec and binaries
 *.exe
+
+*.backup
+

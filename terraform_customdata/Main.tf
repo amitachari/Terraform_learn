@@ -1,5 +1,3 @@
-
-
 resource "azurerm_windows_virtual_machine" "VirtualMachine" {
   name                = "customdata-VM"
   resource_group_name = var.resource_group_name
@@ -22,6 +20,7 @@ resource "azurerm_windows_virtual_machine" "VirtualMachine" {
     sku       = "2016-Datacenter"
     version   = "latest"
   }
+<<<<<<< HEAD
 
 }
 
@@ -30,6 +29,16 @@ resource "azurerm_virtual_machine_extension" "adds_install" {
   virtual_machine_id   = azurerm_windows_virtual_machine.VirtualMachine.id
   publisher            = "Microsoft.Compute"
   type                 = "CustomScriptExtension"
+=======
+  
+}
+
+resource "azurerm_virtual_machine_extension" "adds_install" {
+  name = "ADDSInstall"
+  virtual_machine_id = azurerm_windows_virtual_machine.VirtualMachine.id
+  publisher = "Microsoft.Compute"
+  type = "CustomScriptExtension"
+>>>>>>> b4b0ecf2bf10d309dd57d613817b325a0036c4e7
   type_handler_version = "1.10"
 
   settings = <<SETTINGS
